@@ -13,8 +13,7 @@
 ##### Utilizing Axios to consume data from Airtable and to post new data on Post page
 
 ### API Snippet
-![data-sample](https://user-images.githubusercontent.com/70818713/134046648-d863db0e-644d-4dcd-8f1e-dc5f0269d292.png)
-
+![data-snippet](https://user-images.githubusercontent.com/70818713/134062610-3001c2da-201a-4ad2-ae88-03eb3f4b1235.png)
 
 ### Wireframes
 ![home](https://user-images.githubusercontent.com/70818713/134046166-0ce41483-8db4-4aff-936c-84abf5d8ffb5.png)
