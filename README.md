@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+# Project Overview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Project Name
 
-## Available Scripts
+##### theHODL
 
-In the project directory, you can run:
+### Project Description
 
-### `npm start`
+##### An interactive cryptocurrency application with a social aspect where you can post cryptocurrency tickers/names, input your thoughts on them and rate them on a scale from 1-10
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### API
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+##### Utilizing Axios to consume data from Airtable and to post new data on Post page
 
-### `npm test`
+### API Snippet
+![data-sample](https://user-images.githubusercontent.com/70818713/134046648-d863db0e-644d-4dcd-8f1e-dc5f0269d292.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### Wireframes
+![home](https://user-images.githubusercontent.com/70818713/134046166-0ce41483-8db4-4aff-936c-84abf5d8ffb5.png)
+![crypto](https://user-images.githubusercontent.com/70818713/134046226-be5926c2-702a-4619-8b8f-1d90a5bf5093.png)
+![post](https://user-images.githubusercontent.com/70818713/134046249-6860ca94-3914-4dff-ab68-16f326cc25b6.png)
+![history](https://user-images.githubusercontent.com/70818713/134046280-bc07e1f3-7ed1-4e90-804a-9dfb95c15a81.png)
+![home resp](https://user-images.githubusercontent.com/70818713/134046303-d0a77307-3ee1-479c-a563-dd260391dc6d.png)
+![crypto resp](https://user-images.githubusercontent.com/70818713/134046351-ff729e6a-34ec-4fa3-a044-6bd61bfa3767.png)
+![post resp](https://user-images.githubusercontent.com/70818713/134046375-da7da97b-d3ba-4694-95cd-a0482ff0704b.png)
+![history resp](https://user-images.githubusercontent.com/70818713/134046395-76ab7a7b-86db-4522-a594-4794e732e894.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Component Hierarchy
+![component-hierarchy](https://user-images.githubusercontent.com/70818713/134046486-f9dff0b4-da2a-48db-8e74-239cb9a62b1b.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### MVP
 
-### `npm run eject`
+- Utilize axios to consume data from Airtable, get and render on post page
+- Utilize axios to post new data, render on post page
+- Users complete input fields in form, including name and crypto rating
+- Utilze grid and flex for layouts 
+- Implement mobile responsive design
+- Deploy website
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Post-MVP
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Implement 2nd api for real time crypto data
+- Add additional data feed features
+- Add additional images and ux features
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Timeframes
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+| Timeframes             | Priority | Estimated Time | Actual Time |
+| ---------------------- | -------- | -------------- | ----------- |
+| Component              | (1-5)    |                |             |
+| Planning/wireframes    | 5        | 3hrs           | 3hrs        |
+| React Structure setup  | 5        | 2hrs           |             |
+| Layout/styling setup   | 5        | 3hrs           |             |
+| Routing setup          | 5        | 3hrs           |             |
+| Airtable connect       | 5        | 3hrs           |             |
+| Axios requests         | 5        | 3hrs           |             |
+| Post rendering         | 5        | 2hrs           |             |
+| Components render      | 4        | 3hrs           |             |
+| Form construction      | 4        | 3hrs           |             |
+| Form handling          | 4        | 3hrs           |             |
+| Add price feeds api    | 3        | 3hrs           |             |
+| Render price feeds     | 3        | 3hrs           |             |
+| Debug                  | 5        | 3hrs           |             |
+| Additional feed data   | 3        | 3hrs           |             |
+| Additional ux features | 2        | 3hrs           |             |
+| Total                  |          | 43hrs          |             |
 
-## Learn More
+## SWOT Analysis
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- S: Brainstorming ideas that can have real-world application
+- W: Passing props and paraps between components
+- O: To identify known and unknown areas of improvement to become more well-rounded
+- T: Focusing too much attention on design and post MVP before MVP is completed
