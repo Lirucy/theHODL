@@ -1,13 +1,17 @@
-import { Link } from "react-router-dom"
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
- function Nav() {
+class Nav extends Component {
+  render() {
     return (
-        <nav>
-            <Link to="/">Home</Link>
-            <Link to="/new">New/Add Character</Link>
-        </nav>
-    )
-
+      <nav>
+        <Link to="/">
+          <img src="https://iili.io/RiwpY7.jpg" alt="home" />
+        </Link>
+        <Link to="/history">History</Link>
+      </nav>
+    );
+  }
 }
 
 export default Nav;
