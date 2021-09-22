@@ -23,15 +23,16 @@ class Form extends Component {
   //   await axios.post(baseURL, { fields: newPost }, config);
   // }
 
-  handleSubmit(e) {
+  async handleSubmit(e) {
     e.preventDefault();
+    console.log(this.state);
     const newPost = {
       userName: this.state.userName,
       thoughts: this.state.thoughts,
       rating: this.state.rating,
     };
-    console.log(newPost);
-    // await axios.post(baseURL, { fields: newPost }, config);
+    
+    await axios.post(baseURL, { fields: newPost }, config);
     // this.apiPost();
   }
 
