@@ -1,6 +1,23 @@
 import React, { Component } from 'react';
 
 class Forum extends Component {
+  constructor(props) {
+    super(props); 
+  this.state = {
+
+  }
+  }
+  
+
+    async getPosts() {
+        const response = await axios.get(baseURL, config);
+        // console.log(response.data.records);
+      }
+    
+      componentDidMount() {
+        this.getPosts();
+      }
+      
     render() {
         return (
             <div>
@@ -10,4 +27,4 @@ class Forum extends Component {
     }
 }
 
-export default Forum;
+export default Forum;  
