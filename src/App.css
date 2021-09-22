@@ -10,12 +10,19 @@ nav {
   display: flex;
   justify-content: space-between;
   padding: 15px;
-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 form {
   grid-column: 2/3;
   grid-row: 2/3;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  box-sizing: border-box;
 }
 
 

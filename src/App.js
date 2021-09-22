@@ -3,9 +3,11 @@
 import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
 import axios from "axios";
+import Crypto from "./components/Crypto";
 import Nav from "./components/Nav";
 import Form from "./components/Form";
 import Forum from "./components/Forum";
+import Footer from "./components/Footer";
 import History from "./components/History";
 import Autocomplete from "./components/Autocomplete";
 import "./App.css";
@@ -28,9 +30,15 @@ class App extends Component {
         <Route path="/Forum">
           <Forum />
         </Route>
+        <Route path="/Crypto">
+          <Crypto />
+        </Route>
         <Route path="/Autocomplete">
           <Autocomplete />
         </Route>
+        <footer>
+        <Footer />
+        </footer>
       </div>
     );
   }

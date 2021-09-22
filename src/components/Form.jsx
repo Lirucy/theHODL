@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { baseURL, config } from "../services";
+import { Link } from "react-router-dom";
+import { withRouter } from "react-router";
 // import cryptoList from "../services/crypto-list.json";
 import axios from "axios";
 
@@ -12,30 +14,26 @@ class Form extends Component {
       // name: "",
       crypto: "",
       userName: "",
-      thoughts: "",
+      comment: "",
       rating: 0,
-
     };
   }
 
-  // async apiPost(e, newPost) {
-  //   console.log("apiPost called")
-  //   await axios.post(baseURL, { fields: newPost }, config);
-  // }
-
-  async handleSubmit(e) {
+  handleSubmit = async (e) => {
     e.preventDefault();
     console.log(this.state);
     const newPost = {
+      crypto: this.state.crypto,
       userName: this.state.userName,
-      thoughts: this.state.thoughts,
+      comment: this.state.comment,
       rating: this.state.rating,
     };
-    
-    await axios.post(baseURL, { fields: newPost }, config);
-    // this.apiPost();
-  }
 
+    await axios.post(baseURL, { fields: newPost }, config);
+
+    this.setState({ crypto: "", userName: "", comment: "", rating: 0 });
+    this.props.history.push("./forum");
+  };
 
   render() {
     return (
@@ -45,7 +43,7 @@ class Form extends Component {
           <input
             type="text"
             value={this.state.crypto}
-            placeholder="enter crypto"
+            placeholder="enter crypto here"
             required
             onChange={(e) => this.setState({ crypto: e.target.value })}
           />
@@ -53,17 +51,17 @@ class Form extends Component {
           <input
             type="text"
             value={this.state.userName}
-            placeholder="enter name"
+            placeholder="enter your name here"
             required
             onChange={(e) => this.setState({ userName: e.target.value })}
           />
-          <label htmlFor="thoughts"> Thoughts: </label>
+          <label htmlFor="thoughts"> Comment: </label>
           <input
             type="text"
-            value={this.state.thoughts}
-            placeholder="enter comment"
+            value={this.state.comment}
+            placeholder="enter comments here"
             required
-            onChange={(e) => this.setState({ thoughts: e.target.value })}
+            onChange={(e) => this.setState({ comment: e.target.value })}
           />
           <label htmlFor="rating">Rating: {this.state.rating}/10</label>
           <input
@@ -83,4 +81,4 @@ class Form extends Component {
   }
 }
 
-export default Form; 
+export default withRouter(Form);
