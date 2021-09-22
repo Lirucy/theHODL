@@ -1,8 +1,8 @@
 main {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 2fr 1fr 2fr 2fr;
-  width: 80vw;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 2fr 2fr 2fr;
+  width: 90vw;
   margin: 40px auto 0;
 }
 
@@ -11,6 +11,11 @@ nav {
   justify-content: space-between;
   padding: 15px;
 box-sizing: border-box;
+}
+
+form {
+  grid-column: 2/3;
+  grid-row: 2/3;
 }
 
 

@@ -8,7 +8,7 @@ class Nav extends Component {
         <Link to="/">
           <img src="https://iili.io/RiwpY7.jpg" alt="home" />
         </Link>
-        <Link to="/history">History</Link>
+        <Link to="/history" target="_blank">History</Link>
       </nav>
     );
   }
