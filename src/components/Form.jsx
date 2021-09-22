@@ -1,15 +1,20 @@
 import React, { Component } from "react";
 import { baseURL, config } from "../services";
+// import cryptoList from "../services/crypto-list.json";
 import axios from "axios";
 
 class Form extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    // const cryptoImport = require(cryptoList);
+    super(props);
     this.state = {
+      //name = crypto name
+      // name: "",
       crypto: "",
-      name: "",
+      userName: "",
       thoughts: "",
       rating: 0,
+
     };
   }
 
@@ -18,16 +23,15 @@ class Form extends Component {
   //   await axios.post(baseURL, { fields: newPost }, config);
   // }
 
-  async handleSubmit(e) {
+  handleSubmit(e) {
     e.preventDefault();
     const newPost = {
-      name: this.state.name,
+      userName: this.state.userName,
       thoughts: this.state.thoughts,
       rating: this.state.rating,
     };
-    // console.log(newPost);
-    // const postURL = `${baseURL}/{fields: newPost}`
-    await axios.post(baseURL, { fields: newPost }, config);
+    console.log(newPost);
+    // await axios.post(baseURL, { fields: newPost }, config);
     // this.apiPost();
   }
 
@@ -44,13 +48,13 @@ class Form extends Component {
             required
             onChange={(e) => this.setState({ crypto: e.target.value })}
           />
-          <label htmlFor="name"> Name: </label>
+          <label htmlFor="userName"> Name: </label>
           <input
             type="text"
-            value={this.state.name}
+            value={this.state.userName}
             placeholder="enter name"
             required
-            onChange={(e) => this.setState({ name: e.target.value })}
+            onChange={(e) => this.setState({ userName: e.target.value })}
           />
           <label htmlFor="thoughts"> Thoughts: </label>
           <input
@@ -78,4 +82,4 @@ class Form extends Component {
   }
 }
 
-export default Form;
+export default Form; 
