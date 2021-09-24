@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { baseURL, config } from "../services";
-import { Link } from "react-router-dom";
 import { withRouter } from "react-router";
 // import cryptoList from "../services/crypto-list.json";
 import axios from "axios";
@@ -18,6 +17,7 @@ class Form extends Component {
       comment: "",
       rating: 0,
     };
+    this.getMatchingCryptoNames.bind(this);
   }
 
   handleSubmit = async (e) => {
@@ -33,8 +33,18 @@ class Form extends Component {
     await axios.post(baseURL, { fields: newPost }, config);
 
     this.setState({ crypto: "", userName: "", comment: "", rating: 0 });
+
     this.props.history.push("./forum");
   };
+
+  getMatchingCryptoNames = () => {
+    const matchingCryptoNames = this.props.cryptos.filter((cryptoName) => cryptoName.toLowerCase().includes(this.state.crypto.toLowerCase()));
+    // console.log(matchingCryptoNames, "this is matching crypto names");
+  }
+
+  // componentDidMount() {
+  //   this.getMatchingCryptoNames();
+  // }
 
   render() {
     return (
@@ -44,6 +54,7 @@ class Form extends Component {
           <form onSubmit={this.handleSubmit}>
             <div>
               <label htmlFor="crypto">Crypto: </label>
+              <div className="typeahead-container">
               <input
                 type="text"
                 value={this.state.crypto}
@@ -51,6 +62,14 @@ class Form extends Component {
                 required
                 onChange={(e) => this.setState({ crypto: e.target.value })}
               />
+              {this.state.crypto && (
+                <div className="results-container">
+                  {this.matchingCryptoNames.map((cryptoName) => (
+                    <p>{this.cryptoName}</p>
+                  ))}
+                  </div>
+              )}
+              </div>
               <label htmlFor="userName"> Name: </label>
               <input
                 type="text"

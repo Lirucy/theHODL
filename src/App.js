@@ -1,7 +1,5 @@
-// import { useEffect, useState } from "react";
-// import { Route } from "react-router-dom";
 import React, { Component } from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route } from "react-router-dom";
 import axios from "axios";
 // import Autocomplete from "./components/Autocomplete";
 import Contact from "./components/Contact";
@@ -26,8 +24,15 @@ class App extends Component {
   getCryptos = async () => {
     const cryptosURL = "https://api.coingecko.com/api/v3/coins/list?include_platform=false"
     const response = await axios.get(cryptosURL);
-    // console.log(response.data);
-    this.setState({ cryptos: response.data });
+    // console.log(response.data[0].name);
+
+    
+
+    const cryptoNames =  response.data.map((cryptoItem) => (
+      cryptoItem.name
+      ))
+      // console.log(cryptoNames)
+    this.setState({ cryptos: cryptoNames });
     
   };
 
@@ -40,7 +45,7 @@ class App extends Component {
       <div className="App">
           <Nav />
         <Route exact path="/">
-            <Form />
+            <Form cryptos = {this.state.cryptos}/>
         </Route>
         <Route path="/History">
           <History />
