@@ -5,9 +5,8 @@ class Crypto extends Component {
     render() {
         return (
             <div className="crypto-body">
-                <h3 className="divider"></h3>
+                <div className="divider"><h3 className="divider-text">Some random descriptive text</h3></div>
                 <div>Some placehold Crypto content!</div>
-                <h3 className="divider"></h3>
             </div>
         );
     }

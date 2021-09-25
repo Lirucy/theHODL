@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Route } from "react-router-dom";
 import axios from "axios";
-// import Autocomplete from "./components/Autocomplete";
 import Contact from "./components/Contact";
 import Crypto from "./components/Crypto-info";
 import Footer from "./components/Footer";
@@ -17,35 +16,29 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      cryptos: []
-    }
+      cryptos: [],
+    };
   }
-  
+
   getCryptos = async () => {
-    const cryptosURL = "https://api.coingecko.com/api/v3/coins/list?include_platform=false"
+    const cryptosURL =
+      "https://api.coingecko.com/api/v3/coins/list?include_platform=false";
     const response = await axios.get(cryptosURL);
-    // console.log(response.data[0].name);
 
-    
-
-    const cryptoNames =  response.data.map((cryptoItem) => (
-      cryptoItem.name
-      ))
-      // console.log(cryptoNames)
+    const cryptoNames = response.data.map((cryptoItem) => cryptoItem.name);
     this.setState({ cryptos: cryptoNames });
-    
   };
 
   componentDidMount() {
     this.getCryptos();
   }
-  
+
   render() {
     return (
       <div className="App">
-          <Nav />
+        <Nav />
         <Route exact path="/">
-            <Form cryptos = {this.state.cryptos}/>
+          <Form cryptos={this.state.cryptos} />
         </Route>
         <Route path="/History">
           <History />
@@ -56,9 +49,6 @@ class App extends Component {
         <Route path="/Crypto-info">
           <Crypto />
         </Route>
-        {/* <Route path="/autocomplete">
-          <Autocomplete />
-        </Route> */}
         <Route path="/Contact">
           <Contact />
         </Route>
@@ -68,7 +58,7 @@ class App extends Component {
         <Route path="/Privacy-policy">
           <Privacy />
         </Route>
-        <h3 className="divider"></h3>
+        <div className="divider" id="divider-bottom"></div>
         <Footer />
       </div>
     );

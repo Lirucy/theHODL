@@ -9,11 +9,14 @@ class Nav extends Component {
         <Link to="/" className="the-hodl">
           <img src="https://iili.io/RiwpY7.jpg" alt="home" />
           <div className="title">
-            <h4>HODL home</h4>
+            <h4>HODL Home</h4>
           </div>
         </Link>
         <Link to="/history" target="_blank" className="history">
-          <h3>History</h3>
+          <h3 className="nav-history-link">History</h3>
+        </Link>
+        <Link to="/forum" target="_blank" className="forum">
+          <h3 className="nav-forum-link">Forum</h3>
         </Link>
       </nav>
     );

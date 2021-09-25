@@ -1,74 +1,95 @@
 import React, { Component } from "react";
 import { baseURL, config } from "../services";
 import { withRouter } from "react-router";
-// import cryptoList from "../services/crypto-list.json";
 import axios from "axios";
 import "../App.css";
 
 class Form extends Component {
   constructor(props) {
-    // const cryptoImport = require(cryptoList);
     super(props);
     this.state = {
-      //name = crypto name
-      // name: "",
       crypto: "",
       userName: "",
       comment: "",
       rating: 0,
+      listClosed: false,
     };
-    this.getMatchingCryptoNames.bind(this);
+
+    this.getMatchingCryptoNames = this.getMatchingCryptoNames.bind(this);
   }
 
+  //send api post request after pressing Form submit button
   handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(this.state);
+    // console.log(this.state);
     const newPost = {
       crypto: this.state.crypto,
       userName: this.state.userName,
       comment: this.state.comment,
       rating: this.state.rating,
     };
-
     await axios.post(baseURL, { fields: newPost }, config);
-
     this.setState({ crypto: "", userName: "", comment: "", rating: 0 });
-
     this.props.history.push("./forum");
   };
 
-  getMatchingCryptoNames = () => {
-    const matchingCryptoNames = this.props.cryptos.filter((cryptoName) => cryptoName.toLowerCase().includes(this.state.crypto.toLowerCase()));
-    // console.log(matchingCryptoNames, "this is matching crypto names");
-  }
+  //Filters through array of mapped crypto names to match input value entered in the form, and displays results in a container below input field (typeahead/autocomplete function)
+  getMatchingCryptoNames = (e) => {
+    let matchingCryptoNames = this.props.cryptos
+      .filter((cryptoName) =>
+        cryptoName.toLowerCase().startsWith(this.state.crypto.toLowerCase())
+      )
+      .slice(0, 5);
+      if(this.state.listClosed) {
+        matchingCryptoNames = [];
+      }
+    return (
+      this.state.crypto && (
+        <div className="results-container" onMouseLeave={() => this.setState({ listClosed: true})}>
+          {matchingCryptoNames.map((cryptoName) => (
+            <p
+              onClick={() => {this.setState({ crypto: cryptoName })}}
+            >
+              {cryptoName}
+            </p>
+          ))}
+        </div>
+      )
+    );
+  };
 
-  // componentDidMount() {
-  //   this.getMatchingCryptoNames();
-  // }
+  //method to close list after selection is made
+  closeList(e) {
+    this.setState({ listClosed: !this.state.listClosed });
+  }
 
   render() {
     return (
       <div className="home-body">
-        <h3 className="divider"></h3>
+        <div className="divider">
+          <h3 className="divider-text">Some random descriptive text</h3>
+        </div>
+        <div className="instruct-div">
+          <p className="instructions">
+            Welcome to theHODL! An interactive, social community where you can
+            comment on, rate and post your favorite cryptocurrencies. To get
+            started, enter the desired cryptocurrency name along with remaining
+            fields below and submit.
+          </p>
+        </div>
         <main>
           <form onSubmit={this.handleSubmit}>
-            <div>
+            <div className="form-div">
               <label htmlFor="crypto">Crypto: </label>
               <div className="typeahead-container">
-              <input
-                type="text"
-                value={this.state.crypto}
-                placeholder="enter crypto here"
-                required
-                onChange={(e) => this.setState({ crypto: e.target.value })}
-              />
-              {this.state.crypto && (
-                <div className="results-container">
-                  {this.matchingCryptoNames.map((cryptoName) => (
-                    <p>{this.cryptoName}</p>
-                  ))}
-                  </div>
-              )}
+                <input
+                  type="text"
+                  value={this.state.crypto}
+                  placeholder="enter crypto here"
+                  required
+                  onChange={(e) => this.setState({ crypto: e.target.value }) && {}}
+                />
+                {this.getMatchingCryptoNames()}
               </div>
               <label htmlFor="userName"> Name: </label>
               <input
