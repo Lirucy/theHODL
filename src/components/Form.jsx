@@ -40,15 +40,20 @@ class Form extends Component {
         cryptoName.toLowerCase().startsWith(this.state.crypto.toLowerCase())
       )
       .slice(0, 5);
-      if(this.state.listClosed) {
-        matchingCryptoNames = [];
-      }
+    if (this.state.listClosed) {
+      matchingCryptoNames = [];
+    }
     return (
       this.state.crypto && (
-        <div className="results-container" onMouseLeave={() => this.setState({ listClosed: true})}>
+        <div
+          className="results-container"
+          onMouseLeave={() => this.setState({ listClosed: true })}
+        >
           {matchingCryptoNames.map((cryptoName) => (
             <p
-              onClick={() => {this.setState({ crypto: cryptoName })}}
+              onClick={() => {
+                this.setState({ crypto: cryptoName });
+              }}
             >
               {cryptoName}
             </p>
@@ -58,9 +63,13 @@ class Form extends Component {
     );
   };
 
-  //method to close list after selection is made
+  //method to close list after selection is made and reset listClosed state
   closeList(e) {
-    this.setState({ listClosed: !this.state.listClosed });
+    if ({ listClosed: false }) {
+      this.setState({ listClosed: false });
+    } else {
+      this.setState({ listClosed: !this.state.listClosed });
+    }
   }
 
   render() {
@@ -87,7 +96,9 @@ class Form extends Component {
                   value={this.state.crypto}
                   placeholder="enter crypto here"
                   required
-                  onChange={(e) => this.setState({ crypto: e.target.value }) && {}}
+                  autoFocus
+                  onChange={(e) => this.setState({ crypto: e.target.value })}
+                  onClick={() => this.closeList()}
                 />
                 {this.getMatchingCryptoNames()}
               </div>
