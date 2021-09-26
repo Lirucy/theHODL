@@ -46,13 +46,9 @@ footer {
   z-index: 2;
 }
 
-.app-name {
-
-}
-
-.btc-history {
-  min-height: 100px;
-}
+/* .btc-history {
+  max-height: 100px;
+} */
 
 .contact,
 .wiki,
@@ -75,6 +71,7 @@ footer {
   max-width: 1300px;
   min-height: 65vh;
   margin: 40px auto 0;
+  padding: 0 10px;
 }
 
 .contact-content,
@@ -139,6 +136,7 @@ footer {
   margin: 20px auto;
   max-height: 65vh;
   max-height: calc(100vh - 330px);
+  padding: 0 10px;
   position: relative;
   overflow-y: scroll;
   overscroll-behavior-y: none;
