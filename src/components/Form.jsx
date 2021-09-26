@@ -76,7 +76,7 @@ class Form extends Component {
     return (
       <div className="home-body">
         <div className="divider">
-          <h3 className="divider-text">Some random descriptive text</h3>
+          <h2 className="divider-text">theHODL</h2>
         </div>
         <div className="instruct-div">
           <p className="instructions">

@@ -7,16 +7,16 @@ class Nav extends Component {
     return (
       <nav className="nav">
         <Link to="/" className="the-hodl">
-          <img src="https://iili.io/RiwpY7.jpg" alt="home" />
+          <div><img src="https://iili.io/RiwpY7.jpg" alt="home" /></div>
           <div className="title">
             <h4>HODL Home</h4>
           </div>
         </Link>
         <Link to="/history" target="_blank" className="history">
-          <h3 className="nav-history-link">History</h3>
+          <div className="nav-history-link"><h3>History</h3></div>
         </Link>
         <Link to="/forum" target="_blank" className="forum">
-          <h3 className="nav-forum-link">Forum</h3>
+          <div className="nav-forum-link"><h3>Forum</h3></div>
         </Link>
       </nav>
     );
