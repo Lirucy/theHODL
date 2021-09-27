@@ -6,8 +6,8 @@ class Nav extends Component {
   render() {
     return (
       <nav className="nav">
-        <Link to="/" className="the-hodl">
-          <div><img src="https://iili.io/RiwpY7.jpg" alt="home" /></div>
+        <Link to="/" >
+          <div className="the-hodl"><img src="https://iili.io/RiwpY7.jpg" alt="home" /></div>
           <div className="title">
             <h4>HODL Home</h4>
           </div>

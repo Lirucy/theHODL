@@ -30,6 +30,9 @@ class History extends Component {
             </p>
           </div>
           <div className="crypto-explain">
+          <h3 className="most-expensive">
+              Cryptocurrency explained
+            </h3>
             <p>
               A cryptocurrency, crypto-currency, or crypto is a binary data
               designed to work as a medium of exchange wherein individual coin

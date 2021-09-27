@@ -40,8 +40,8 @@ class Forum extends Component {
                 {post.fields.comment}
               </p>
               <p>
-                <strong>Rating: </strong>
-                <h4>{post.fields.rating}/10</h4>
+                <strong>Rating: {post.fields.rating}/10</strong>
+                {/* <h4>{post.fields.rating}/10</h4> */}
               </p>
               {/* <p className="stamp">
                 <h5>{post.fields.stamp}</h5> 
