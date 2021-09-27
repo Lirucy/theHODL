@@ -233,6 +233,8 @@ p {
   box-shadow: 3px 3px 5px darkgray;
 }
 
+
+
 @media screen and (max-width: 425px) {
   footer {
     background-color: white;
@@ -302,7 +304,7 @@ p {
   .home-body,
   .history-body,
   .forum-body {
-    max-height: calc(100vh - 280px);
+    max-height: calc(100vh - 220px);
   }
 
 .contact-body,
