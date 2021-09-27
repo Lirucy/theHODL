@@ -240,6 +240,7 @@ p {
 }
 
 .title {
+  color: black;
   position: relative;
   left: -20px;
   top: -18px;
