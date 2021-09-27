@@ -13,7 +13,6 @@ class Forum extends Component {
 
   getPosts = async () => {
     const response = await axios.get(baseURL, config);
-    // console.log(response.data.records);
     this.setState({ posts: response.data.records });
   };
 
@@ -41,7 +40,6 @@ class Forum extends Component {
               </p>
               <p>
                 <strong>Rating: {post.fields.rating}/10</strong>
-                {/* <h4>{post.fields.rating}/10</h4> */}
               </p>
               {/* <p className="stamp">
                 <h5>{post.fields.stamp}</h5> 

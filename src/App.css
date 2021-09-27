@@ -4,35 +4,6 @@
   text-decoration: none;
 }
 
-.home-body {
-  display: grid;
-  font-size: 18px;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  min-width: 80vw;
-  max-width: 1300px;
-  margin: 20px auto;
-  max-height: 65vh;
-  max-height: calc(100vh - 330px);
-  padding: 0 10px;
-  position: relative;
-  overflow-y: scroll;
-  overscroll-behavior-y: none;
-}
-/* display: grid;
-  font-size: 18px;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  min-width: 80vw;
-  max-width: 1300px;
-  margin: 20px auto;
-  max-height: 65vh;
-  max-height: calc(100vh - 330px);
-  padding: 0 10px;
-  position: relative;
-  overflow-y: scroll;
-  overscroll-behavior-y: none; */
-
 nav {
   display: flex;
   justify-content: space-between;
@@ -81,16 +52,31 @@ p {
 }
 
 .contact-body,
-.privacy-body,
+.privacy-body {
+  display: grid;
+  font-size: 18px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 3fr;
+  min-width: 80vw;
+  max-width: 1300px;
+  margin: 20px auto ;
+  min-height: calc(100vh - 330px);
+  padding: 0 10px;
+  position: relative;
+  overflow-y: scroll;
+  overscroll-behavior-y: none;
+}
+
 .terms-body {
   display: grid;
   font-size: 18px;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  row-gap: 20px;
   min-width: 80vw;
   max-width: 1300px;
-  margin: 20px auto;
-  min-height: calc(100vh - 330px);
+  margin: 20px auto ;
+  max-height: calc(100vh - 330px);
   padding: 0 10px;
   position: relative;
   overflow-y: scroll;
@@ -176,6 +162,22 @@ p {
   color: black;
   padding: 10px 0 0;
   text-decoration: none;
+}
+
+.home-body {
+  display: grid;
+  font-size: 18px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  min-width: 80vw;
+  max-width: 1300px;
+  margin: 20px auto;
+  max-height: 65vh;
+  max-height: calc(100vh - 330px);
+  padding: 0 10px;
+  position: relative;
+  overflow-y: scroll;
+  overscroll-behavior-y: none;
 }
 
 .instruct-div {
@@ -303,22 +305,37 @@ p {
     max-height: calc(100vh - 280px);
   }
 
-  .contact-body,
-  .privacy-body,
-  .terms-body {
-    display: grid;
-    font-size: 18px;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    min-width: 80vw;
-    max-width: 1300px;
-    margin: 20px auto;
-    min-height: calc(100vh - 280px);
-    padding: 0 10px;
-    position: relative;
-    overflow-y: scroll;
-    overscroll-behavior-y: none;
-  }
+.contact-body,
+.privacy-body {
+  display: grid;
+  font-size: 18px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 3fr;
+  min-width: 80vw;
+  max-width: 1300px;
+  margin: 20px auto ;
+  max-height: calc(100vh - 280px);
+  padding: 0 10px;
+  position: relative;
+  overflow-y: scroll;
+  overscroll-behavior-y: none;
+}
+
+.terms-body {
+  display: grid;
+  font-size: 18px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  row-gap: 20px;
+  min-width: 80vw;
+  max-width: 1300px;
+  margin: 20px auto ;
+  min-height: calc(100vh - 280px);
+  padding: 0 10px;
+  position: relative;
+  overflow-y: scroll;
+  overscroll-behavior-y: none;
+}
 
   .instructions {
     margin: 0;
