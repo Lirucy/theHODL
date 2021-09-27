@@ -312,7 +312,7 @@ p {
   .home-body,
   .history-body,
   .forum-body {
-    max-height: calc(100vh - 280px);
+  max-height: calc(100vh - 260px);
   }
 
   .forum-text,
@@ -321,20 +321,7 @@ p {
     height: 20px;
     margin: 0;
   }
-  /* .forum {
-    position: absolute;
-    left: 20px;
-    margin: 0;
-    height:20px;
-    width: 50px;
-  }
-
-  .history {
-    position: absolute;
-    top: -10px;
-    left: 0;
-  } */
-
+ 
 .contact-body,
 .privacy-body {
   display: grid;
@@ -344,7 +331,7 @@ p {
   min-width: 80vw;
   max-width: 1300px;
   margin: 20px auto ;
-  max-height: calc(100vh - 280px);
+  max-height: calc(100vh - 260px);
   padding: 0 10px;
   position: relative;
   overflow-y: scroll;
@@ -360,7 +347,7 @@ p {
   min-width: 80vw;
   max-width: 1300px;
   margin: 20px auto ;
-  min-height: calc(100vh - 280px);
+  min-height: calc(100vh - 260px);
   padding: 0 10px;
   position: relative;
   overflow-y: scroll;
