@@ -9,7 +9,7 @@ nav {
   justify-content: space-between;
   padding: 10px 100px 0;
   box-sizing: border-box;
-  max-height: 110px;
+  max-height: 85px;
 }
 
 form {
@@ -60,7 +60,7 @@ p {
   min-width: 80vw;
   max-width: 1300px;
   margin: 20px auto ;
-  min-height: calc(100vh - 330px);
+  min-height: calc(100vh - 310px);
   padding: 0 10px;
   position: relative;
   overflow-y: scroll;
@@ -76,7 +76,7 @@ p {
   min-width: 80vw;
   max-width: 1300px;
   margin: 20px auto ;
-  max-height: calc(100vh - 330px);
+  max-height: calc(100vh - 310px);
   padding: 0 10px;
   position: relative;
   overflow-y: scroll;
@@ -129,7 +129,7 @@ p {
   max-width: 1300px;
   margin: 20px auto;
   max-height: 65vh;
-  max-height: calc(100vh - 330px);
+  max-height: calc(100vh - 310px);
   padding: 0 10px;
   position: relative;
   overflow-y: scroll;
@@ -145,16 +145,22 @@ p {
   max-width: 1300px;
   margin: 20px auto;
   max-height: 65vh;
-  max-height: calc(100vh - 330px);
+  max-height: calc(100vh - 310px);
   padding: 0 10px;
   position: relative;
   overflow-y: scroll;
   overscroll-behavior-y: none;
 }
 
+.forum {
+  position: relative;
+  right: -20px;
+}
+
 .history {
+  font-size: 16px;
   position: absolute;
-  right: 200px;
+  right: 180px;
 }
 
 .history,
@@ -173,7 +179,7 @@ p {
   max-width: 1300px;
   margin: 20px auto;
   max-height: 65vh;
-  max-height: calc(100vh - 330px);
+  max-height: calc(100vh - 310px);
   padding: 0 10px;
   position: relative;
   overflow-y: scroll;
@@ -209,13 +215,15 @@ p {
 .the-hodl {
   color: black;
   text-decoration: none;
+  position: relative;
+  left: 5px;
 }
 
 .title {
   color: black;
   position: relative;
   left: -20px;
-  top: -18px;
+  top: -25px;
 }
 
 .typeahead-container {
@@ -255,7 +263,7 @@ p {
     display: flex;
     padding: 5px;
     box-sizing: border-box;
-    max-height: 100px;
+    max-height: 80px;
   }
 
   p {
@@ -307,6 +315,26 @@ p {
     max-height: calc(100vh - 280px);
   }
 
+  .forum-text,
+  .history-text {
+    width: 70px;
+    height: 20px;
+    margin: 0;
+  }
+  /* .forum {
+    position: absolute;
+    left: 20px;
+    margin: 0;
+    height:20px;
+    width: 50px;
+  }
+
+  .history {
+    position: absolute;
+    top: -10px;
+    left: 0;
+  } */
+
 .contact-body,
 .privacy-body {
   display: grid;
@@ -351,12 +379,13 @@ p {
   .nav-forum-link {
     font-size: 16px;
     position: relative;
-    top: -30px;
+    top: -10px;
+    right: 5px;
   }
   .nav-history-link {
     font-size: 16px;
     position: relative;
-    left: 195px;
+    left: 185px;
     top: 32px;
   }
 
