@@ -21,7 +21,6 @@ class Form extends Component {
   //send api post request after pressing Form submit button
   handleSubmit = async (e) => {
     e.preventDefault();
-    // console.log(this.state);
     const newPost = {
       crypto: this.state.crypto,
       userName: this.state.userName,

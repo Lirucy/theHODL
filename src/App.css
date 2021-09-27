@@ -4,20 +4,25 @@
   text-decoration: none;
 }
 
-/* main {
-  display: grid;
-  grid-template-columns: 2fr 3fr 2fr;
-  grid-template-rows: .5fr 2fr 2fr 1fr;
-  width: 100vw;
-  max-height: 60vh;
-  max-width: 1200px;
-  margin: 0 auto;
-} */
-
 .home-body {
-  /* display: grid;
+  display: grid;
+  font-size: 18px;
   grid-template-columns: 1fr;
-  grid-template-rows: .5fr 2fr 2fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  min-width: 80vw;
+  max-width: 1300px;
+  margin: 20px auto;
+  max-height: 65vh;
+  max-height: calc(100vh - 330px);
+  padding: 0 10px;
+  position: relative;
+  overflow-y: scroll;
+  overscroll-behavior-y: none;
+}
+/* display: grid;
+  font-size: 18px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   min-width: 80vw;
   max-width: 1300px;
   margin: 20px auto;
@@ -27,20 +32,6 @@
   position: relative;
   overflow-y: scroll;
   overscroll-behavior-y: none; */
-  display: grid;
-  font-size: 18px;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  min-width: 80vw;
-  max-width: 1300px;
-  margin: 20px auto;
-  max-height: 65vh;
-  min-height: calc(100vh - 330px);
-  padding: 0 10px;
-  position: relative;
-  overflow-y: scroll;
-  overscroll-behavior-y: none;
-}
 
 nav {
   display: flex;
@@ -48,15 +39,13 @@ nav {
   padding: 10px 100px 0;
   box-sizing: border-box;
   max-height: 110px;
-  /* position: fixed; */
-  
 }
 
 form {
   display: grid;
   position: relative;
   justify-content: center;
-  grid-template-columns: 1fr .3fr 1fr;
+  grid-template-columns: 1fr 0.3fr 1fr;
   grid-template-rows: 1fr;
   grid-column: 2/3;
   grid-row: 2/3;
@@ -66,14 +55,13 @@ form {
 footer {
   background-color: white;
   display: flex;
-  /* flex-wrap: wrap; */
   font-size: 18px;
   justify-content: space-between;
   padding: 0 100px;
   box-sizing: border-box;
   height: 60px;
   margin: 0 auto;
-  padding: 10px;
+  padding: 0 10px;
   position: fixed;
   min-width: 100vw;
   z-index: 2;
@@ -82,10 +70,6 @@ footer {
 p {
   margin: 18px 0 0;
 }
-
-/* .btc-history {
-  max-height: 100px;
-} */
 
 .contact,
 .wiki,
@@ -99,16 +83,6 @@ p {
 .contact-body,
 .privacy-body,
 .terms-body {
-  /* display: grid;
-  box-sizing: border-box;
-  font-size: 18px;
-  grid-template-columns: 1fr 5fr 1fr;
-  grid-template-rows: 1fr 2fr 1fr;
-  width: 90vw;
-  max-width: 1300px;
-  min-height: 65vh;
-  margin: 40px auto 0;
-  padding: 0 10px; */
   display: grid;
   font-size: 18px;
   grid-template-columns: 1fr;
@@ -138,9 +112,7 @@ p {
   height: 60px;
   margin: 0;
   padding: 0 100px;
-  /* position: fixed; */
 }
-
 
 .divider-text {
   grid-column: 2/3;
@@ -166,7 +138,6 @@ p {
   row-gap: 10px;
   column-gap: 10px;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  /* grid-template-columns: 1fr 1fr 1fr; */
   grid-template-rows: 1fr 1fr 1fr;
   min-width: 80vw;
   max-width: 1300px;
@@ -200,7 +171,8 @@ p {
   right: 200px;
 }
 
-.history, .forum {
+.history,
+.forum {
   color: black;
   padding: 10px 0 0;
   text-decoration: none;
@@ -229,8 +201,6 @@ p {
   box-sizing: border-box;
   box-shadow: 3px 3px 10px lightgray;
   padding: 10px;
-  /* min-width: 300px; */
-  /* text-align: center; */
   z-index: -1;
 }
 
@@ -261,10 +231,7 @@ p {
   box-shadow: 3px 3px 5px darkgray;
 }
 
-
-
 @media screen and (max-width: 425px) {
-  
   footer {
     background-color: white;
     display: grid;
@@ -279,7 +246,7 @@ p {
     width: 100vw;
     z-index: 2;
   }
-  
+
   nav {
     display: flex;
     padding: 5px;
@@ -287,102 +254,101 @@ p {
     max-height: 100px;
   }
 
-p {
-  margin: 0;
-}
-.contact {
-  grid-column: 1/2;
-  grid-row: 2/3;
-  text-align: center;
-}
+  p {
+    margin: 0;
+  }
+  .contact {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    text-align: center;
+  }
 
-.copyright {
-  grid-column: 2/3;
-  grid-row: 1/2;
-  text-align: center;
-}
+  .copyright {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    text-align: center;
+  }
 
-.privacy {
-  grid-column: 2/3;
-  grid-row: 2/3;
-  text-align: center;
-}
+  .privacy {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    text-align: center;
+  }
 
-.terms {
-  grid-column: 3/4;
-  grid-row: 2/3;
-  text-align: center;
-}
+  .terms {
+    grid-column: 3/4;
+    grid-row: 2/3;
+    text-align: center;
+  }
 
-.contact-text, 
-.copyright-text, 
-.privacy-text, 
-.terms-text {
-  margin: 0;
-} 
+  .contact-text,
+  .copyright-text,
+  .privacy-text,
+  .terms-text {
+    margin: 0;
+  }
 
-.divider {
-  height: 40px;
-}
+  .divider {
+    height: 40px;
+  }
 
-.divider-text {
-  margin: 5px 0 0;
-  width: 300px;
-}
+  .divider-text {
+    margin: 5px 0 0;
+    width: 300px;
+  }
 
-.home-body,
-.history-body, 
-.forum-body {
-  max-height: calc(100vh - 280px);
-}
+  .home-body,
+  .history-body,
+  .forum-body {
+    max-height: calc(100vh - 280px);
+  }
 
-.contact-body,
-.privacy-body,
-.terms-body {
-  display: grid;
-  font-size: 18px;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  min-width: 80vw;
-  max-width: 1300px;
-  margin: 20px auto;
-  min-height: calc(100vh - 280px);
-  padding: 0 10px;
-  position: relative;
-  overflow-y: scroll;
-  overscroll-behavior-y: none;
-}
+  .contact-body,
+  .privacy-body,
+  .terms-body {
+    display: grid;
+    font-size: 18px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    min-width: 80vw;
+    max-width: 1300px;
+    margin: 20px auto;
+    min-height: calc(100vh - 280px);
+    padding: 0 10px;
+    position: relative;
+    overflow-y: scroll;
+    overscroll-behavior-y: none;
+  }
 
-.instructions {
-  margin: 0;
-  min-width: 300px;
-}
+  .instructions {
+    margin: 0;
+    min-width: 300px;
+  }
 
-.instruction-div {
-  min-width: 300px;
-}
+  .instruction-div {
+    min-width: 300px;
+  }
 
-.nav-forum-link {
-  font-size: 16px;
-  position: relative;
-  top: -30px;
-}
- .nav-history-link {
-  font-size: 16px;
-  position: relative;
-  left: 195px;
-  top: 32px;
- }
+  .nav-forum-link {
+    font-size: 16px;
+    position: relative;
+    top: -30px;
+  }
+  .nav-history-link {
+    font-size: 16px;
+    position: relative;
+    left: 195px;
+    top: 32px;
+  }
 
- .the-hodl {
-   position: relative;
-   left: 20px;
- }
+  .the-hodl {
+    position: relative;
+    left: 20px;
+  }
 
- .title {
-  color: black;
-  position: relative;
-  left: 0px;
- }
-
+  .title {
+    color: black;
+    position: relative;
+    left: 0px;
+  }
 }
